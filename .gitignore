@@ -1,0 +1,5 @@
+/target
+*.dll
+*.exe
+# XD
+asd.txt 
