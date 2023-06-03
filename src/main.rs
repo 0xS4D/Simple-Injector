@@ -44,7 +44,9 @@ fn main() {
             "Current directory: {}",
             std::env::current_dir().unwrap().display()
         );
-        println!("Error: {} not found", dll);
+        println!("Error: {} not found, press ENTER to exit.", dll);
+        std::io::stdin().read_line(&mut String::new()).unwrap();
+        return ();
     }
 
     println!("Do you want an infinite loop after injection? (y/n) - Default: n");
@@ -68,7 +70,7 @@ fn main() {
                 clear_c(0);
 
                 print!(
-                    "{} segs waiting game and trying again... {}",
+                    "{} segs waiting process and trying again... {}",
                     counter,
                     animation[counter - 1]
                 );
@@ -78,7 +80,7 @@ fn main() {
             Some(p) => {
                 clear_c(0);
                 println!("Process found!");
-                thread::sleep(Duration::from_secs(3));
+                thread::sleep(Duration::from_secs(4));
                 match p.inject(dll) {
                     Err(e) => {
                         println!("Error: {}", e);
@@ -105,4 +107,6 @@ fn main() {
             }
         }
     }
+    println!("Press ENTER to exit.");
+    std::io::stdin().read_line(&mut String::new()).unwrap();
 }
