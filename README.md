@@ -1,8 +1,6 @@
 <div align="center">
 
    # **Nice and Simple Injector**
-<!-- Languaje badge: Rust -->
-   [![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
    `s_injector` is a simple injector for 😉 game. Made with 💟 
 </div>
 
