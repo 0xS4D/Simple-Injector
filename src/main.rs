@@ -45,7 +45,6 @@ fn main() {
             std::env::current_dir().unwrap().display()
         );
         println!("Error: {} not found", dll);
-        std::process::exit(exitcode::DATAERR);
     }
 
     println!("Do you want an infinite loop after injection? (y/n) - Default: n");

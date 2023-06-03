@@ -17,4 +17,3 @@ strip = true      # Automatically strip symbols from the binary.
 injrs = "0.1.2"
 crossterm = "0.26.1"
 console = "0.15.7"
-exitcode = "1.1.2"
